@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow - To Do List</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Header -->
+        <header class="header">
+            <div>
+                <p class="subtitle">Stay organized</p>
+                <h1>TaskFlow</h1>
+            </div>
+
+            <div class="task-count">
+                <span id="totalCount">0</span>
+                <small>Total Tasks</small>
+            </div>
+        </header>
+
+
+        <!-- Add Task -->
+        <section class="add-task">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="What do you need to do?"
+            >
+
+            <button
+                class="add-btn"
+                onclick="addTask()"
+            >
+                + Add Task
+            </button>
+
+        </section>
+
+
+        <!-- Active Tasks -->
+        <section class="section">
+
+            <div class="section-header">
+
+                <h2>
+                    <span class="icon">📝</span>
+                    Active Tasks
+                </h2>
+
+                <span
+                    class="badge"
+                    id="activeCount"
+                >
+                    0
+                </span>
+
+            </div>
+
+
+            <div id="activeTaskList" class="task-list">
+
+                <!-- Active tasks appear here -->
+
+            </div>
+
+        </section>
+
+
+        <!-- Completed Tasks -->
+        <section class="section">
+
+            <div class="section-header">
+
+                <h2>
+                    <span class="icon">✅</span>
+                    Completed Tasks
+                </h2>
+
+                <span
+                    class="badge completed-badge"
+                    id="completedCount"
+                >
+                    0
+                </span>
+
+            </div>
+
+
+            <div id="completedTaskList" class="task-list">
+
+                <!-- Completed tasks appear here -->
+
+            </div>
+
+        </section>
+
+
+        <!-- History -->
+        <section class="section history-section">
+
+            <div class="section-header">
+
+                <h2>
+                    <span class="icon">🕒</span>
+                    Task History
+                </h2>
+
+            </div>
+
+
+            <div id="historyList">
+
+                <!-- History appears here -->
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

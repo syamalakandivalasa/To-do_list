@@ -1,0 +1,482 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #da7df7,
+            #96d9f4
+        );
+
+    padding: 40px 20px;
+}
+/* =========================
+   MAIN APP
+========================= */
+.app {
+    width: 100%;
+    max-width: 750px;
+    margin: auto;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.18);
+}
+/* =========================
+   HEADER
+========================= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.subtitle {
+    font-size: 13px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 5px;
+}
+h1 {
+    font-size: 36px;
+    color: #222;
+}
+.task-count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 75px;
+    background: #f1f3ff;
+    border-radius: 15px;
+}
+.task-count span {
+    font-size: 25px;
+    font-weight: bold;
+    color: #667eea;
+}
+
+.task-count small {
+    color: #888;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================
+   ADD TASK
+========================= */
+
+.add-task {
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 35px;
+}
+
+
+#taskInput {
+    flex: 1;
+
+    padding: 15px 18px;
+
+    border: 2px solid #e5e5e5;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    transition: 0.2s;
+}
+
+
+#taskInput:focus {
+    border-color: #667eea;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(102, 126, 234, 0.1);
+}
+
+
+.add-btn {
+    padding: 0 22px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #667eea;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.add-btn:hover {
+    background: #5568d8;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+    margin-bottom: 30px;
+}
+
+
+.section-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 14px;
+}
+
+
+.section-header h2 {
+    font-size: 19px;
+
+    color: #333;
+}
+
+
+.icon {
+    margin-right: 6px;
+}
+
+
+.badge {
+    min-width: 28px;
+
+    padding: 5px 9px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    background: #eef0ff;
+
+    color: #667eea;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.completed-badge {
+    background: #eaf8ed;
+
+    color: #43a047;
+}
+
+
+/* =========================
+   TASK LIST
+========================= */
+
+.task-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+/* =========================
+   TASK CARD
+========================= */
+
+.task {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 15px 16px;
+
+    background: #f8f9ff;
+
+    border: 1px solid #eceeff;
+
+    border-radius: 12px;
+
+    transition: 0.2s;
+}
+
+
+.task:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 15px
+        rgba(0, 0, 0, 0.07);
+}
+
+
+.task span {
+    flex: 1;
+
+    font-size: 15px;
+
+    color: #333;
+
+    word-break: break-word;
+}
+
+
+/* =========================
+   COMPLETED TASK
+========================= */
+
+.task.completed {
+    background: #f5fbf6;
+
+    border-color: #dcefe0;
+}
+
+
+.task.completed span {
+    text-decoration: line-through;
+
+    color: #888;
+}
+
+
+/* =========================
+   TASK BUTTONS
+========================= */
+
+.task-buttons {
+    display: flex;
+
+    gap: 7px;
+}
+
+
+.task-buttons button {
+    border: none;
+
+    padding: 8px 11px;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.complete-btn {
+    background: #e7f6e9;
+
+    color: #31963a;
+}
+
+
+.complete-btn:hover {
+    background: #d4efd7;
+}
+
+
+.delete-btn {
+    background: #ffe9e7;
+
+    color: #e53935;
+}
+
+
+.delete-btn:hover {
+    background: #ffd7d4;
+}
+
+
+/* =========================
+   HISTORY
+========================= */
+
+.history-section {
+    border-top: 1px solid #eeeeee;
+
+    padding-top: 25px;
+}
+
+
+.history-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 13px 15px;
+
+    margin-bottom: 8px;
+
+    background: #fafafa;
+
+    border-radius: 10px;
+
+    border-left: 4px solid #43a047;
+}
+
+
+.history-task {
+    color: #444;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+
+.history-date {
+    color: #999;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   EMPTY MESSAGE
+========================= */
+
+.empty {
+    padding: 25px;
+
+    text-align: center;
+
+    color: #999;
+
+    background: #fafafa;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+
+    .app {
+        padding: 22px;
+
+        border-radius: 18px;
+    }
+
+
+    .header {
+        align-items: flex-start;
+    }
+
+
+    h1 {
+        font-size: 30px;
+    }
+
+
+    .task-count {
+        width: 75px;
+
+        height: 65px;
+    }
+
+
+    .add-task {
+        flex-direction: column;
+    }
+
+
+    .add-btn {
+        height: 48px;
+    }
+
+
+    .task {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .task-buttons {
+        width: 100%;
+    }
+
+
+    .task-buttons button {
+        flex: 1;
+    }
+
+
+    .history-item {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+}
